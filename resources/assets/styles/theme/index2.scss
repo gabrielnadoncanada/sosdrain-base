@@ -1,0 +1,79 @@
+/**
+ * Axial
+ * Axial Construct is a universal template for factories, industry, construction, architecture, factories, mechanics, energy
+ * Exclusively on https://1.envato.market/axial-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2021 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+
+// BASE
+@import "bootstrap/dist/css/bootstrap-grid";
+@import "base/base";
+@import "base/mixins";
+@import "base/variables";
+@import "base/keyframes";
+@import "global/global";
+
+// BLOCKS
+@import "blocks/header";
+@import "blocks/partners";
+@import "blocks/process";
+@import "blocks/feedback-slider";
+@import "blocks/slider/dots";
+@import "blocks/contact-data";
+@import "blocks/footer";
+@import "blocks/gallery";
+@import "blocks/features-list";
+@import "blocks/reviews";
+@import "blocks/slider/controls";
+@import "blocks/accordion";
+@import "blocks/feedback";
+@import "blocks/feedback-form";
+@import "blocks/services-list";
+@import "blocks/blog/latest";
+
+body.home {
+  //@import "pages/index2/about";
+  //@import "pages/index2/advantages";
+  //@import "pages/index2/gallery";
+  //@import "pages/gallery/main-grid";
+  //@import "progress-tracker.css";
+  //@import "pages/index2/hero";
+  //@import "pages/index2/contact";
+  //@import "pages/faq/main";
+  //color: #162739;
+
+
+  @import "pages/index/hero";
+  @import "pages/index/services";
+  @import "pages/index/projects";
+  @import "pages/faq/main";
+  @import "pages/index/spots";
+  @import "pages/index/team";
+  @import "pages/index/faq";
+  @import "pages/index/blog";
+}
+@import "pages/about/hero";
+
+body.a-propos {
+  @import "pages/about/quote";
+  @import "pages/faq/main";
+
+  @import "pages/about/services";
+  @import "pages/about/features";
+}
+
+@import "pages/contacts/main";
+@import "blocks/partners";
+
+body.single-service {
+  @import "pages/single_service/tabs";
+  @import "pages/faq/main";
+  @import "pages/single_service/services";
+}
+@import "pages/gallery/main-masonry";

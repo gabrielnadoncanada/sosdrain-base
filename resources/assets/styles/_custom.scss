@@ -1,0 +1,142 @@
+section.partners {
+  img {
+    height: 122px;
+  }
+}
+
+.services_header {
+  margin-bottom: 30px;
+  max-width: 510px;
+  width: 100%;
+  @media screen and (min-width: 991.98px) {
+    margin-bottom: 40px;
+  }
+}
+
+.breadcrumbs a {
+  @extend .breadcrumbs_item;
+}
+
+body.home .primary-bg .faq_header .text {
+  color: #fff;
+}
+
+.wpcf7-form {
+  .wpcf7-form-control + .wpcf7-not-valid-tip {
+    margin-top: -20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .wpcf7-form-control-wrap,
+  .wpcf7-form-control {
+    width: 100%;
+  }
+
+  .wpcf7-response-output {
+    margin-left: 0 !important;
+  }
+
+  .wpcf7-checkbox {
+    display: grid;
+    @media only screen and (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+
+    .wpcf7-list-item {
+      margin-left: 0 !important;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 15px;
+        margin-left: 2px;
+        transform: scale(1.4);
+      }
+
+      > label {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.header_navbar {
+  padding: 20px 0;
+}
+
+
+.footer_main-block_nav {
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.footer_secondary {
+  @media only screen and (max-width: 767.99px) {
+    flex-direction: column;
+  }
+}
+
+
+#primary-navigation {
+  align-items: center;
+}
+
+#primary-navigation .list-item:last-child {
+  a {
+    @extend .btn;
+    padding: 10px 30px !important;
+  }
+}
+
+
+body.home .hero_container {
+  @media only screen and (max-width: 768px) {
+    padding-top: 35px;
+    padding-bottom: 100px;
+
+  }
+}
+
+.btn {
+  transition: 250ms all ease-in !important;
+}
+.btn:not(.btn--static):hover,
+#primary-navigation .list-item:last-child a:not(.btn--static):hover,
+.btn:not(.btn--static):focus,
+#primary-navigation .list-item:last-child a:not(.btn--static):focus {
+  bottom: unset !important;
+  color: #fff !important;
+  background: #1D9EBC !important;
+}
+
+
+@media only screen and (min-width: 1200px){
+  .flex-row-reverse  .hero_header {
+    margin-right: 0 !important;
+    margin-left: 115px;
+
+  }
+
+}
+
+
+.no_img .hero_header {
+  max-width: 100% !important;
+}
