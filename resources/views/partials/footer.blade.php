@@ -32,7 +32,6 @@
               'menu' => get_field('menu_1', 'option'),
               'menu_class' => 'footer_main-block_nav',
               'container' => '',
-              'walker' => new Custom_Nav_Menu_Walker()
           ]) ?>
 
       </div>
