@@ -85,7 +85,7 @@ class Custom_Nav_Menu_Walker extends Walker_Nav_Menu
      * @see Walker::end_el()
      *
      */
-    function end_el(&$output)
+    function end_el(&$output, $data_object, $depth = 0, $args = null)
     {
         $output .= '</li>';
     }
