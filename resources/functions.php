@@ -58,7 +58,17 @@ array_map(function ($file) use ($sage_error) {
     if (!locate_template($file, true, true)) {
         $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
     }
-}, ['helpers', 'setup', 'filters', 'admin','walker']);
+}, ['helpers', 'setup', 'filters', 'admin']);
+
+/**
+ * Include the custom walker
+ * Make sure the walker.php file exists in the current folder.
+ */
+if (file_exists($walker = __DIR__ . '/walker.php')) {
+    require_once $walker;
+} else {
+    $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $walker), 'File not found');
+}
 
 /**
  * Here's what's happening with these hooks:
@@ -113,6 +123,7 @@ add_action('wp_head', function(){
 	</style>
 	<?php
 });
+
 
 function wwp_custom_query_vars_filter($vars) {
     $vars[] .= 'service_type';
