@@ -11,6 +11,7 @@
             'menu_class' => 'header_navbar-nav_list',
             'container_class' => 'header_navbar-nav',
             'container' => 'nav',
+            'walker' => new Custom_Nav_Menu_Walker()
         ]) ?>
       <button class="hamburger">
         <span class="line line--short"></span>

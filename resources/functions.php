@@ -114,7 +114,7 @@ add_action('wp_head', function(){
 	<?php
 });
 
-
+require_once('resources/walker.php');
 function wwp_custom_query_vars_filter($vars) {
     $vars[] .= 'service_type';
     return $vars;
