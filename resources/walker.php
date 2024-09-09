@@ -18,7 +18,7 @@ class Custom_Nav_Menu_Walker extends Walker_Nav_Menu
      * @param array $args Additional strings.
      * @return void
      */
-    public function start_el(&$output, $item, $depth, $args)
+    public function start_el(&$output, $data_object, $depth = 0, $args = null, $current_object_id = 0)
     {
         if(!$depth){
             $output .= '<li class="list-item">';
