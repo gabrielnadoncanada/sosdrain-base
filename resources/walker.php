@@ -26,16 +26,16 @@ class Custom_Nav_Menu_Walker extends Walker_Nav_Menu
 
         $attributes = '';
 
-        !empty ($item->attr_title)
+        !empty ($data_object->attr_title)
         // Avoid redundant titles
-        and $item->attr_title !== $item->title
-        and $attributes .= ' title="' . esc_attr($item->attr_title) . '"';
+        and $data_object->attr_title !== $data_object->title
+        and $attributes .= ' title="' . esc_attr($data_object->attr_title) . '"';
 
-        !empty ($item->url)
-        and $attributes .= ' href="' . esc_attr($item->url) . '"';
+        !empty ($data_object->url)
+        and $attributes .= ' href="' . esc_attr($data_object->url) . '"';
 
         $attributes = trim($attributes);
-        $title = apply_filters('the_title', $item->title, $item->ID);
+        $title = apply_filters('the_title', $data_object->title, $data_object->ID);
 
         if ($args->walker->has_children) {
             $item_output = "$args->before<button class='dropdown-trigger d-inline-flex align-items-center'>
@@ -51,7 +51,7 @@ class Custom_Nav_Menu_Walker extends Walker_Nav_Menu
         $output .= apply_filters(
             'walker_nav_menu_start_el'
             , $item_output
-            , $item
+            , $data_object
             , $depth
             , $args
         );
@@ -85,7 +85,7 @@ class Custom_Nav_Menu_Walker extends Walker_Nav_Menu
      * @see Walker::end_el()
      *
      */
-    function end_el(&$output, $data_object, $depth = 0, $args = null)
+    function end_el(&$output)
     {
         $output .= '</li>';
     }
